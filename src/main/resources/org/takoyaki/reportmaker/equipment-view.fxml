@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.takoyaki.reportmaker.controller.EquipmentController"
+      spacing="10" stylesheets="@modern-style.css" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+    <Label text="%menu.equipment" styleClass="title-label"/>
+    <TableView fx:id="equipmentTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="%equipment.name"/>
+            <TableColumn fx:id="ratingColumn" text="%equipment.rating"/>
+            <TableColumn fx:id="classColumn" text="%equipment.class"/>
+            <TableColumn fx:id="manufacturerColumn" text="%equipment.manufacturer"/>
+            <TableColumn fx:id="modelColumn" text="%equipment.model"/>
+            <TableColumn fx:id="serialColumn" text="%equipment.serialNumber"/>
+            <TableColumn fx:id="assetColumn" text="%equipment.assetNumber"/>
+        </columns>
+    </TableView>
+    <HBox spacing="8" styleClass="toolbar-card">
+        <Button text="%button.add" onAction="#add"/>
+        <Button text="%button.edit" onAction="#edit"/>
+        <Button text="%button.delete" onAction="#delete"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="%button.moveUp" onAction="#moveUp"/>
+        <Button text="%button.moveDown" onAction="#moveDown"/>
+    </HBox>
+</VBox>

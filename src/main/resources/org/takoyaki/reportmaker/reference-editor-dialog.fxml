@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.takoyaki.reportmaker.controller.ReferenceEditorDialogController" spacing="10" prefWidth="520"
+      stylesheets="@modern-style.css" styleClass="card">
+    <padding>
+        <Insets top="14" right="14" bottom="14" left="14"/>
+    </padding>
+    <HBox spacing="10">
+        <Label text="%label.referenceType"/>
+        <ComboBox fx:id="typeCombo" prefWidth="180"/>
+    </HBox>
+    <GridPane fx:id="webPane" hgap="10" vgap="9">
+        <columnConstraints>
+            <ColumnConstraints minWidth="110"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <Label text="%label.webAuthorRequired" GridPane.rowIndex="0"/>
+        <TextField fx:id="webAuthorField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="%label.pageTitleRequired" GridPane.rowIndex="1"/>
+        <TextField fx:id="pageTitleField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="%label.urlRequired" GridPane.rowIndex="2"/>
+        <TextField fx:id="urlField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="%label.accessedDateRequired" GridPane.rowIndex="3"/>
+        <TextField fx:id="accessedDateField" promptText="%prompt.accessedDate" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+    <GridPane fx:id="bookPane" hgap="10" vgap="9">
+        <columnConstraints>
+            <ColumnConstraints minWidth="110"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <Label text="%label.bookAuthorRequired" GridPane.rowIndex="0"/>
+        <TextField fx:id="bookAuthorField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="%label.bookTitleRequired" GridPane.rowIndex="1"/>
+        <TextField fx:id="bookTitleField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="%label.publisherRequired" GridPane.rowIndex="2"/>
+        <TextField fx:id="publisherField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="%label.yearRequired" GridPane.rowIndex="3"/>
+        <TextField fx:id="yearField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+</VBox>

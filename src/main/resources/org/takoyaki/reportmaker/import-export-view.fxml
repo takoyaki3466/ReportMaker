@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox fx:id="root" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.takoyaki.reportmaker.controller.ImportExportController" spacing="14"
+      stylesheets="@modern-style.css" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+    <Label text="%menu.importExport" styleClass="title-label"/>
+    <TitledPane text="%io.projectPane" expanded="true" collapsible="false" styleClass="card">
+        <content>
+            <HBox spacing="10" styleClass="toolbar-card">
+                <Button text="%button.saveProject" onAction="#saveProject"/>
+                <Button text="%button.openProject" onAction="#openProject"/>
+            </HBox>
+        </content>
+    </TitledPane>
+    <TitledPane text="%io.markdownPane" expanded="true" collapsible="false" styleClass="card">
+        <content>
+            <HBox spacing="10" styleClass="toolbar-card">
+                <Button text="%button.exportMarkdown" onAction="#exportMarkdown"/>
+                <Button text="%button.importMarkdown" onAction="#importMarkdown"/>
+            </HBox>
+        </content>
+    </TitledPane>
+    <Label text="%io.imageHint" wrapText="true" styleClass="secondary-label"/>
+    <Separator/>
+    <Label fx:id="statusLabel" text="%io.ready" wrapText="true" styleClass="status-label"/>
+</VBox>

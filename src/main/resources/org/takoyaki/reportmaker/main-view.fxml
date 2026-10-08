@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.takoyaki.reportmaker.controller.MainController"
+            stylesheets="@modern-style.css" styleClass="page">
+    <top>
+        <VBox spacing="8" styleClass="app-header">
+            <padding>
+                <Insets top="14" right="18" bottom="14" left="18"/>
+            </padding>
+            <Label text="%app.heading" styleClass="app-title"/>
+            <GridPane hgap="10" vgap="8">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="70"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+                <Label text="%label.title" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="titleField" promptText="%prompt.title" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label text="%label.englishTitle" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="englishTitleField" promptText="%prompt.englishTitle" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+            </GridPane>
+        </VBox>
+    </top>
+    <left>
+        <VBox spacing="7" prefWidth="165" styleClass="sidebar">
+            <padding>
+                <Insets top="18" right="12" bottom="18" left="12"/>
+            </padding>
+            <Button text="%menu.preparation" onAction="#showPreparation" maxWidth="Infinity" styleClass="nav-button"/>
+            <Button text="%menu.mainReport" onAction="#showMainReport" maxWidth="Infinity" styleClass="nav-button"/>
+            <Button text="%menu.equipment" onAction="#showEquipment" maxWidth="Infinity" styleClass="nav-button"/>
+            <Button text="%menu.figures" onAction="#showFigures" maxWidth="Infinity" styleClass="nav-button"/>
+            <Button text="%menu.equations" onAction="#showEquations" maxWidth="Infinity" styleClass="nav-button"/>
+            <Button text="%menu.references" onAction="#showReferences" maxWidth="Infinity" styleClass="nav-button"/>
+            <Separator/>
+            <Button text="%menu.preview" onAction="#showPreview" maxWidth="Infinity" styleClass="nav-button"/>
+            <Button text="%menu.importExport" onAction="#showImportExport" maxWidth="Infinity" styleClass="nav-button"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contentHost" styleClass="content-area"/>
+    </center>
+</BorderPane>

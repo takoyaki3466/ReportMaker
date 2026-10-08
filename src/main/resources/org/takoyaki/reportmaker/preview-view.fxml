@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.takoyaki.reportmaker.controller.PreviewController"
+      spacing="10" stylesheets="@modern-style.css" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+    <Label text="%preview.heading" styleClass="title-label"/>
+    <TextArea fx:id="markdownArea" editable="false" wrapText="false" VBox.vgrow="ALWAYS"
+              style="-fx-font-family: monospace;"/>
+    <HBox spacing="8" styleClass="toolbar-card">
+        <Button text="%button.refresh" onAction="#refresh"/>
+        <Button text="%button.copy" onAction="#copy"/>
+    </HBox>
+</VBox>

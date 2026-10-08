@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.takoyaki.reportmaker.controller.MainReportController"
+      spacing="10" stylesheets="@modern-style.css" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+    <Label text="%menu.mainReport" styleClass="title-label"/>
+    <Label text="%label.mainEquipmentHint" styleClass="secondary-label"/>
+    <HBox spacing="8" styleClass="toolbar-card">
+        <Label text="%label.editSection"/>
+        <ComboBox fx:id="sectionCombo" prefWidth="230"/>
+    </HBox>
+    <ListView fx:id="blockList" VBox.vgrow="ALWAYS"/>
+    <HBox spacing="8" styleClass="toolbar-card">
+        <Button text="%button.addBlock" onAction="#addBlock"/>
+        <Button text="%button.edit" onAction="#editBlock"/>
+        <Button text="%button.delete" onAction="#deleteBlock"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button text="%button.moveUp" onAction="#moveUp"/>
+        <Button text="%button.moveDown" onAction="#moveDown"/>
+    </HBox>
+</VBox>

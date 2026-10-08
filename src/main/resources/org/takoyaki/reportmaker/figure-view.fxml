@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.takoyaki.reportmaker.controller.FigureController"
+      spacing="10" stylesheets="@modern-style.css" styleClass="page">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18"/>
+    </padding>
+    <Label text="%menu.figures" styleClass="title-label"/>
+    <Label text="%label.figureHint" styleClass="secondary-label"/>
+    <ListView fx:id="figureList" VBox.vgrow="ALWAYS"/>
+    <HBox spacing="8" styleClass="toolbar-card">
+        <Button text="%button.add" onAction="#add"/>
+        <Button text="%button.edit" onAction="#edit"/>
+        <Button text="%button.delete" onAction="#delete"/>
+    </HBox>
+</VBox>

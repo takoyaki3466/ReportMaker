@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.takoyaki.reportmaker.controller.EquationEditorDialogController" hgap="10" vgap="10"
+          prefWidth="540" stylesheets="@modern-style.css" styleClass="card">
+    <padding>
+        <Insets top="14" right="14" bottom="14" left="14"/>
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="90"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+    <Label text="%label.equationNumber" GridPane.rowIndex="0"/>
+    <Label fx:id="numberLabel" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="%label.equationName" GridPane.rowIndex="1"/>
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="%label.latexRequired" GridPane.rowIndex="2"/>
+    <TextArea fx:id="latexArea" prefRowCount="8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+</GridPane>
